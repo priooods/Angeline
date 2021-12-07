@@ -11,7 +11,7 @@ const app = express();
 const bc = new Blockchain();
 const wallet = new Wallet();
 const tp = new TransactionPool();
-const p2p = new P2pServer(bc);
+const p2p = new P2pServer(bc, tp);
 
 // Support request with application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -44,9 +44,13 @@ app.get("/transaction", (req, res) => {
 app.post("/add_transact", (req, res) => {
   const { penerima, amount } = req.body;
   const transaction = wallet.createTransaction(penerima, amount, tp);
+  p2p.broadcastTransaction(transaction);
   res.redirect("/transaction");
 });
 
+app.get("/pubkey", (req, res) => {
+  res.status(200).json({ pub_key: wallet.publickey });
+});
 
 app.listen(TCP_PORT, () => { console.log(`Server listening on port ${TCP_PORT}`); })
 p2p.listen()

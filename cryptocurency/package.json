@@ -9,8 +9,8 @@
     "start": "node ./protocol/tcp",
     "dev": "node ./protocol/tcp"
   },
-  "jest" : {
-    "testEnvironment" : "node"
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "prio dwi sembodo",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "body-parser": "^1.19.0",
     "crypto-js": "^4.1.1",
     "elliptic": "^6.5.4",
+    "express": "^4.17.1",
     "jest": "^27.4.3",
     "uuid": "^8.3.2"
   }
