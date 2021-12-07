@@ -30,6 +30,14 @@ describe("Wallet", () => {
           ).amount
         ).toEqual(wallet.balance - send_amount * 2);
       });
+        
+        it("clone the send_amount output for the penerima", () => {
+          expect(
+            transaction.outputs
+              .filter((output) => output.address === penerima)
+              .map((out) => out.amount)
+          ).toEqual([send_amount, send_amount]);
+        });
     });
   });
 });
