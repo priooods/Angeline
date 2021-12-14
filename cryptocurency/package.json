@@ -1,0 +1,28 @@
+{
+  "name": "cryptocurency",
+  "version": "1.0.0",
+  "description": "crypto p2p angeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "dev-test": "nodemon dev_unit_test",
+    "start": "node ./protocol/tcp",
+    "dev": "node ./protocol/tcp"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "prio dwi sembodo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto-js": "^4.1.1",
+    "elliptic": "^6.5.4",
+    "express": "^4.17.1",
+    "jest": "^27.4.3",
+    "uuid": "^8.3.2"
+  }
+}
