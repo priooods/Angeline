@@ -1,0 +1,10 @@
+{
+  "angeline": {
+    "model": {
+      "audio_training_dir": "C:/Users/prio/Desktop/Angeline/artificial/dataset"
+    },
+    "dataset": {
+      "voice": "C:/Users/prio/Desktop/Angeline/artificial/dataset"
+    }
+  }
+}
