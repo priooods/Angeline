@@ -38,7 +38,22 @@ pada Code Editor pilihan anda. Saya menyarankan anda menggunakan VSCode.
     ``` bash
     ## pergi ke folder artificial
     C:/User/Angeline: cd artificial
+    ```
 
+    - **Noted**
+
+    Apabila anda belum melakukan setup [ffmpeg](https://ffmpeg.org/download.html) atau [libav](https://libav.org/) pada Enviroment, anda dapat mendownload melalui halaman berikut [download libav](http://builds.libav.org/windows/release-gpl/)
+
+    **cara setup**
+
+    - download libav pada link diatas
+    - extract zip
+    - copy lokasi directory `/bin` ke `PATH` Environment
+    - lanjutkan step selanjutnya untuk menginstall requirement.txt
+
+    *lewati noted ini apabila anda telah mensetup **[ffmpeg](https://ffmpeg.org/download.html)** atau **[libav](https://libav.org/)** sebelumnya*
+
+    ``` bash
     ## jalankan perintah install module pada file requirement.txt
     C:/User/Angeline/artifical: pip install -r requirement.txt
     ```
@@ -79,6 +94,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
         
 
 
