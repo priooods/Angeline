@@ -30,15 +30,18 @@ git clone https://github.com/priooods/Angeline.git
 setelah anda berhasil melakukan cloning Project Angeline, silahkan anda buka project Angeline
 pada Code Editor pilihan anda. Saya menyarankan anda menggunakan VSCode.
 
-1. Machine Learning
+1. **Machine Learning**
 
-    - Step 1
+    - **Step 1**
+        
         Untuk menggunakan atau bergabung dengan project Angeline pada role Machine Learning anda
-        diharuskan untuk menjalankan instalasi module yang Saya pakai dalam pembuatan Angeline Machine Learning. cara instalasi module anda dapat pergi ke folder **artificial** melalui terminal dengan cara berikut :
+        diharuskan untuk menjalankan instalasi module yang Saya pakai dalam pembuatan Angeline Machine Learning. cara instalasi module anda dapat pergi ke folder ***artificial*** melalui terminal dengan cara berikut :
 
         ``` bash
+        ## pergi ke folder artificial
         C:/User/Angeline: cd artificial
-        
+
+        ## jalankan perintah install module pada file requirement.txt
         C:/User/Angeline/artifical: pip install -r requirement.txt
         ```
 
