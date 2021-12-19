@@ -1,11 +1,11 @@
 from voice_biometric.prepocessing import Preposessing
 import pandas as pd
-import json
 import os
 
 class Dataset():
-    def __init__(self,_directory_dataset):
+    def __init__(self,_directory_dataset,_directory_audio):
         self.directory = _directory_dataset
+        self.audio = _directory_audio
         
     # membuat csv dengan pandas dataframe
     # secara default filename csv diberi nama ab_dataset (Audio Biometric Dataset)
@@ -26,22 +26,11 @@ class Dataset():
             _output.to_csv(f"{self.directory}/{_filename_dataset}",index=False,header=None,mode='a')
         return _output
     
-def _run_new_dataset(_directory_dataset,_directory_audio):    
-    # memanggil class Dataset
-    _dataset = Dataset(_directory_dataset)
-    
-    # melakukan looping untuk mendapatkan semua audio file pada path audio
-    for i,_audio_file in enumerate(os.listdir(_directory_audio)):
-        _dataset._new_dataset(f"{_directory_audio}/{_audio_file}",'Prio')
-    
-if __name__ == '__main__':
-    # membaca directory model audio dari config.json
-    _config = open('../config.json')
-    # load file json
-    _config = json.load(_config)
-    # mendapatkan lokasi directori audio
-    _directory_audio = _config['angeline']['model']['audio_training_dir']
-    # mendapatkan lokasi directori dataset
-    _directory_dataset = _config['angeline']['dataset']['voice']
-    _run_new_dataset(_directory_dataset,_directory_audio)
+    def _run(self):    
+        # memanggil class Dataset
+        _dataset = Dataset(self.directory)
+        
+        # melakukan looping untuk mendapatkan semua audio file pada path audio
+        for i,_audio_file in enumerate(os.listdir(self.audio)):
+            _dataset._new_dataset(f"{self.audio}/{_audio_file}",'Prio')
     
