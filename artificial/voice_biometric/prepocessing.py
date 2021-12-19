@@ -1,6 +1,5 @@
 import numpy as np
 from scipy.stats import gmean
-import pandas as pd
 from pyAudioAnalysis import audioFeatureExtraction
 import librosa
 
@@ -87,15 +86,3 @@ class Preposessing():
             'centroid': F[3].mean()/1000, # (kHz)
         }
         return result_d
-    
-    def _new_dataset(self, _label='', _directory_dataset='',_filename_dataset='ab_dataset.csv'):
-        # mengeluarkan data hasil extraksi
-        extract = Preposessing(self.audio)._feature_extraction()
-        # menambahkan variabel label pada object extract
-        # label berguna untuk melabeli data setiap hasil extraksi
-        extract['label'] = _label
-        # mambuat csv dengan pandas dataframe
-        # secara default filename csv diberi nama ab_dataset (Audio Biometric Dataset)
-        output = pd.DataFrame(data=[extract])
-        output.to_csv(f"{_directory_dataset}\{_filename_dataset}",index=True)
-        return output
