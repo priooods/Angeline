@@ -10,7 +10,6 @@ def read_audio_file(_file = "",_print_log=False):
         
     # kita mengeluarkan output yang ada pada audio yang kita baca    
     _channel, _sample_width, _sample_rate, _nframes, _comptype, _compname = wav.getparams()
-    # assert _channel == 2 and _sample_width == 2 and _comptype == 'NONE'
     _frames = wav.readframes(_nframes * _channel) # hasil output teersebut kita baca frame by frame nya
     _sound = struct.unpack_from((str(_nframes)+'h') * _channel, _frames) # kita petakan urutan audio nya jadi satu kesatuan
     wav.close() # setelah kita selesai membaca isi dari sebuah audio. kita hentikan proses membaca audionya
