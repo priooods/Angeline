@@ -58,6 +58,45 @@ pada Code Editor pilihan anda. Saya menyarankan anda menggunakan VSCode.
     C:/User/Angeline/artifical: pip install -r requirement.txt
     ```
 
+    1. Voice Biometric
+
+        Pada tahap pertama angeline akan dibekali dengan kemampuan Voice Biometric, dan untuk melakukan setup pada voice biometric anda dapat memperhatikan beberapa point penting, yaitu :
+
+        - **MODEL AUDIO**
+
+            Model audio yang bisa anda pakai sebagai sample data, dapat anda lihat pada `/artificial/audio` . pada `PATH` tersebut anda juga dapat memasukan semua audio model yang ingin anda masukan sendiri. 
+
+            Saya juga menyediakan beberapa method yang dapat anda gunakan langsung tanpa perlu membuat lagi dari awal
+
+            ``` python
+
+            def create_voice_model() # method untuk membuat model baru dari rekaman audio langsung
+
+            def manipulate_audio_filename() # method untuk mereplace audio file dengan audio baru dan dengan filename custom
+
+            ```
+
+            lihat method lain dengan pergi ke file `/artificial/voice_biometric/utils.py` . ( saya menyertakan documentasi code )
+
+
+        - **FEATURE EXTRACTION**
+
+            Untuk melakukan feature extraction saya menggunakan pendekatan yang lebih spesific dengan melakukan banyak extraction pada audio data, dan saya melakukan ini dengan referensi extraction yang dapat ada lihat pada link berikut [Referensi Extraction Audio](https://www.kaggle.com/primaryobjects/voicegender)
+
+            Untuk melihat bagaimana saya melakukan Feature Extraction terhadap Audio anda dapat mempelajarinya dengan membuka file `/artificial/voice_biometric/prepocessing.py` . ( saya menyertakan documentasi code )
+
+        - **DATASETS**
+
+            Dataset pada Angeline disimpan dalam bentuk `.. .cvs` yang berisikan value - value yang didapat dari hasil Prepocessing. [Referensi Format Audio Datasets](https://www.kaggle.com/primaryobjects/voicegender)
+
+            Apabila anda ingin membuat datasets sendiri, anda dapat memanggil Method yang sudah saya siapkan, anda bisa melihat pada file `/artificial/voice_biometric/create-dataset.py`
+
+            ``` python
+
+            def _new_dataset() # method untuk membuat atau melakukan update datasets, Sesuaikan value pada argument dengan tujuan anda
+
+            ```
+
 1. **Blockchain & Cryptocurency**
         
     Untuk menggunakan atau bergabung dengan project Angeline pada role Blockchain & Cryptocurency anda
@@ -73,8 +112,7 @@ pada Code Editor pilihan anda. Saya menyarankan anda menggunakan VSCode.
 
     - **Noted**
 
-    **Untuk saat ini blockchain & Crytptocurency masih dalam tahap model menggunakan *JavaScript* ,** 
-    **Saya harus melakukan migrasi ke dalam bahasa C . dan saya saat ini sedang belajar bahasa C**
+    **Untuk saat ini blockchain & Crytptocurency masih dalam tahap blueprint yang saya buat menggunakan *JavaScript* , Saya harus melakukan migrasi ke dalam bahasa C . dan saya saat ini sedang belajar bahasa C**
 
     
 
