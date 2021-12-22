@@ -1,5 +1,4 @@
 pandas
-scikit-image
 numpy
 matplotlib
 scipy
@@ -7,6 +6,7 @@ librosa
 sklearn
 hmmlearn
 simplejson
+seaborn
 eyed3
 pydub
 pyfiglet
