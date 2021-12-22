@@ -76,6 +76,8 @@ pada Code Editor pilihan anda. Saya menyarankan anda menggunakan VSCode.
     **Untuk saat ini blockchain & Crytptocurency masih dalam tahap model menggunakan *JavaScript* ,** 
     **Saya harus melakukan migrasi ke dalam bahasa C . dan saya saat ini sedang belajar bahasa C**
 
+    
+
 ## License
 MIT License
 
