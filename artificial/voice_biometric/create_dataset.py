@@ -5,11 +5,18 @@ import os, fnmatch
 
 class Dataset():
     def __init__(self,_outdir,_audio_dir):
+        '''
+            Argument : 
+                - _outdir       : lokasi folder yang akan menyimpan file datasets baru atau default dataset
+                                  Example _outdir = f"{lokasi directory datasets}"
+                - _audio_dir    : file audio yang akan di extraksi , perlu di ingat type data berupa array yang
+                                  berisikan file audio. Example _audio_dir = f"{lokasi directory file audio}"
+        '''
         self._outdir = _outdir
         self._audio_dir = _audio_dir
         
     # membuat csv dengan pandas dataframe
-    # secara default filename csv diberi nama ab_dataset (Audio Biometric Dataset)
+    # secara default filename csv diberi nama ab_dataset (Audio Biometric Dataset) dan disimpan di folder datasets
     def _new_dataset(self, _label='', _filename_dataset='ab_dataset.csv'):
         
         # filtering file audio berdasatkan label input

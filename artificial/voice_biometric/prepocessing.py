@@ -6,6 +6,12 @@ import librosa
 class Preposessing():
     
     def __init__(self, _audio_file):
+        '''
+            Argument : 
+                - _audio_file   : single file audio yang ingin kita extraksi, file audio berformat ( wav )
+                                  Example : 
+                                    _audio_file = f"{...directory_audio/audio_1.wav}"
+        '''
         self.audio = _audio_file
     
     def _feature_extraction(self):
